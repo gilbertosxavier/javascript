@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores em JavaScript</title>
+</head>
+<body>
+    <h1>Operadores em JavaScript</h1>
+    <ul>
+        <li><h2>Aritméticos</h2></li>
+        <ul>
+            <li>
+                <p>O sinal <code>'+'</code> representa <strong>Adição</strong></p>
+            </li>
+            <li>
+                <p>O sinal <code>'-'</code> representa <strong>Subtração</strong></p>
+            </li>
+            <li>
+                <p>O sinal <code>'*'</code> representa <strong>Multiplicação</strong></p>
+            </li>
+            <li>
+                <p>O sinal <code>'/'</code> representa divisão com números reais, <strong>com vírgula</strong>.</p>
+            </li>
+            <li>
+                <p>O sinal <code>'%'</code> representa divisão inteira, <strong>sem vírgula</strong>.</p>
+            </li>
+            <li>
+                <p>O sinal <code>'**'</code> representa <strong>Potênciação</strong></p>
+            </li>
+            <li>
+                <p>O sinal <code>'( )'</code> representa <strong>Parênteses</strong></p>
+            </li>
+            <li>
+                <p>Operador de <strong>Atribuição</strong> é representado pelo caractere '='.<br/>Seguem Exemplos:</p>
+            <ul>
+                <li><code>const nome = Gilberto</code></li>
+                <li><code>let idade = 33</code></li>
+                <li><code>var cidade = Pelotas</code></li>
+            </ul>
+            </li>
+        </ul>
+        
+        <li><h2>Relacionais</h2></li>
+        <p>Operadores relacionais, como o próprio nome diz estabelecem uma relação entre algo.</p>
+            
+            <p>Ainda dentro dos operadores relacionais, temos a Operação de identidade que é representada pelo simbolo '===' onde ele verifica se as duas coisas que estão sendo comparadas são identicas.<br/> Vamos ao exemplo:</p>
+                <ul>
+                    <li>
+                        <p> <code>5 == 5 -> true</code> <br/> Aqui o JavaScript entende que é igual;</p>
+                    </li>
+                    <li>
+                        <p> <code>5 == '5'-> true</code> <br/>Aqui o JavaScript entende que é igual, embora sejam tipos diferentes primeiro um número e o segundo uma string; </p>
+                    </li>
+                    <li>
+                        <p> <code>5 === '5' -> false</code> <br/>Aqui o JavaScript entende que o valor é diferente, pois com o comparador '===' ele verifica se são identicos. </p>
+                    </li>
+                    <li>
+                        <p> <code>5 === 5 -> true</code> <br/>Aqui o JavaScript entende que o valor é igual, pois são identicos. </p>
+                    </li>
+                </ul>
+
+        <li><h2>Lógicos</h2></li>
+        <p>No JavaScript temos 3 Operadores Lógicos  que são: Negação <code>' ! '</code>, Conjunção <code>' && '</code> e Disjunção <code>' || '</code> <br/>Podemos verificar que a negação muda o valor de sua saída, Conjunção só será true se todas as váriaveis de entrada forem satisfeitas e a Disjunção será true se pelo menos uma das variáveis de entrada for satisfeita.</p>
+                <ol>
+                    <li><p>
+                        Negação <code>'!'</code>:<br/>
+                            <code>!true  -> false</code> <br/>
+                            <code>!false -> true</code>
+                    </p>
+                    </li>
+                    <li>
+                        <p>
+                            Conjunção <code>'&&'</code>:<br/>
+                                <code>true  && true  -> true</code> <br/>
+                                <code>true  && false -> false</code> <br/>
+                                <code>false && true  -> false</code> <br/>
+                                <code>false && false -> false</code> <br/>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Disjunção <code>'||'</code>:<br/>
+                                <code>true && true -> true</code> <br/>
+                                <code>true && false -> true</code> <br/>
+                                <code>false && true -> true</code> <br/>
+                                <code>false && false -> false</code> <br/>
+                        </p>
+                    </li>
+                </ol>
+        <li><h2>Ternário</h2>
+            <p>Operador <strong>ternário</strong> consiste em uma operação onde o resultado será <code>true</code> ou <code>false</code> dependendo do teste feito. Possui essa estrutura que veremos a seguir.<br>
+                <code>teste ? true : false</code> <br/>
+                Exemplos:
+                <ul>
+                    <li>
+                        <code>
+                            var nota = 8; <br/>
+                            nota >= 7 ? 'APROVADO' : 'REPROVADO';
+                        </code>
+                    </li>
+                    <li>
+                        <code>
+                            var x = 8; <br/>
+                            var res = x % 2 == 0 ? 'SIM' : 'NÃO' <br/>
+                            res == SIM
+                        </code>
+                    </li>
+                </ul>
+
+            </p>
+
+        </li>
+    </ul>
+    <h1>Precedência de Operadores</h1>
+    <p>Sempre devemos respeitar essa ordem nas operações, pois o JavaScript se baseia nela.</p>
+
+    <ol>
+        <li>
+            <h2>Aritméticos</h2>
+            <p> Sendo as operações de multiplicação, divisão, adição e subtração devem ser executadas pela ordem de aparição, sendo da esquerda para direita.</p>
+            <ol>
+                <li>Os Parênteses <code>'( )'</code> tem preferência;</li>
+                <li>A Potenciação <code>'**'</code> vem logo na sequência;</li>
+                <li>Após temos multiplicação, divisão sem e com resto  <code>'*'</code> , <code>'/'</code> , <code>'%'</code> ; </li>
+                <li>Por fim temos adição e subtração <code>'+'</code>, <code>'-'</code>/</li>
+                
+            </ol>
+        </li>
+        <li>
+            <h2>Relacionais</h2>
+            <p>Os operadores relacionais não tem ordem entre si, porém devem ser resolvidos em da esquerda para direita.</p>
+            <ul>
+                <li><p>O simbolo <code>'>'</code> representa a expressão 'maior que';</p></li>
+                <li><p>O simbolo <code>'<'</code> representa a expressão 'menor que';</p></li>
+                <li><p>O simbolo <code>'>='</code> representa a expressão 'maior ou igual a';</p></li>
+                <li><p>O simbolo <code>'<='</code> representa a expressão 'menor ou igual a';</p></li>
+                <li><p>O simbolo <code>'=='</code> representa a expressão 'igual a';</p></li>
+                <li><p>O simbolo <code>'!='</code> representa a expressão 'diferente';</p></li>
+                
+            </ul>
+        </li>
+        <li>
+            <h2>Lógicos</h2>
+            <p>Se houverem várias condições na mesma sentença a ordem de execução é <strong>SEMPRE</strong> Negação,Conjunção e Disjunção.</p>
+            <ol>
+            
+                <li>
+                    <p>Negação: <code>'!'</code>;</p>
+                </li>
+                <li>
+                    <p>Conjunção: <code>'&&'</code>;</p>
+                </li>
+                <li>
+                    <p>Disjunção: <code>'||'</code>;</p>
+                </li>
+                
+            </ol>
+        </li>
+        <li>
+            <h2>Ternário</h2>
+            <p>
+                Sempre será o último executado, pois indica uma condição de resultado.<br/>
+                <code>teste ? true : false</code>
+            </p>
+        </li>
+    </ol>
+
+</body>
+</html>
