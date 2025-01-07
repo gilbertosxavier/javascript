@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Polícia Federal</h1>
+    Qual é a sua nacionalidade? <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        
+
+        function verificar() {
+            let pais = window.document.getElementById('txtnac')
+            let res = window.document.getElementById('res')
+            let nac = pais.value.trim().toLowerCase()
+
+            
+            res.innerHTML = `<p>Sua nacionalidade é  ${nac}</p>`
+            
+            if (nac !== 'brasileiro' ) {    
+                res.innerHTML += `<p>Você é estrangeiro e não pode entrar!</p>`
+            } else{
+                res.innerHTML += `<p>Você é brasileiro e pode entrar!</p>`
+            }
+                
+            
+        }
+    </script>
+</body>
+</html>
